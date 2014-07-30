@@ -11,11 +11,11 @@ var aFile = new File({
   cwd: "/",
   base: "/test/",
   path: "/test/file.js",
-  contents: new Buffer("module.exports = { test: 1 }")
+  contents: new Buffer("module.exports = { test: 'yo' }")
 });
 
 var resolvedFile = vinylRequire(aFile);
-console.log(resolvedFile.test) // 1
+console.log(resolvedFile.test) // yo
 ```
 
 [MIT](http://opensource.org/licenses/MIT) © [Chris Montgomery](http://www.chrismontgomery.info/)
