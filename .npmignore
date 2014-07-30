@@ -1,0 +1,8 @@
+.travis.yml
+readme.md
+/gulpfile.js
+test.js
+.idea
+.DS_Store
+*.log
+*.orig

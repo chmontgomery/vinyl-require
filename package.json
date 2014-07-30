@@ -1,0 +1,22 @@
+{
+  "name": "vinyl-require",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp ci"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.6",
+    "gulp-help": "^0.1.11",
+    "gulp-jshint": "^1.8.2",
+    "gulp-mocha": "^0.5.2",
+    "jshint-stylish": "^0.4.0",
+    "should": "^4.0.4"
+  },
+  "dependencies": {
+    "vinyl": "^0.3.0"
+  }
+}
