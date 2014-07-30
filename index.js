@@ -1,5 +1,4 @@
-var VinylFile = require('vinyl'),
-  path = require('path'),
+var path = require('path'),
   _extensions = {
     JS: '.js',
     JSON: '.json'
@@ -8,7 +7,7 @@ var VinylFile = require('vinyl'),
 module.exports = function (file) {
   var fileExtension;
 
-  if (!file || !(file instanceof VinylFile)) {
+  if (!file || (typeof file.isBuffer !== 'function')) { // dumb way to do instanceof so this module works when required
     throw new Error('Expected vinyl file but got ' + file);
   }
 

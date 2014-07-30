@@ -1,6 +1,6 @@
 # vinyl-require [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
-> Like calling node's [`require`](http://nodejs.org/api/globals.html#globals_require), but takes a [vinyl file](https://github.com/wearefractal/vinyl)
+> Like calling node's [`require`](http://nodejs.org/api/globals.html#globals_require) but instead parses the contents of a [vinyl file](https://github.com/wearefractal/vinyl)
 
 ## Usage
 
