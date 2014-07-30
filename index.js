@@ -25,7 +25,7 @@ module.exports = function (file) {
     throw new Error('Unexpected file extension. Expected .js or .json but got ' + fileExtension);
   }
   if (file.isStream()) {
-    throw new Error('Streams not supported');
+    throw new Error('Streams not supported'); // todo add support
   }
   return null;
 };

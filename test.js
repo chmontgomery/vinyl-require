@@ -1,6 +1,7 @@
 var vinylRequire = require('./index'),
   File = require('vinyl'),
-  should = require('should');
+  should = require('should'),
+  Stream = require('stream');
 
 describe('index', function () {
   it('should resolve basic node.js file', function () {
@@ -50,13 +51,20 @@ describe('index', function () {
   describe('should throw error', function () {
 
     it('when file null', function () {
-      (function() {
+      (function () {
         vinylRequire(null);
       }).should.throw(/^Expected vinyl file but got null/);
     });
 
+    it('when file is stream', function () {
+      (function () {
+        var aFile = new File({contents: new Stream()});
+        vinylRequire(aFile);
+      }).should.throw(/^Streams not supported/);
+    });
+
     it('when file is unknown extension', function () {
-      (function() {
+      (function () {
         var aFile = new File({
           cwd: "/",
           base: "/test/",
