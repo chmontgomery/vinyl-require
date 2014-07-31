@@ -7,7 +7,7 @@ var path = require('path'),
 module.exports = function (file) {
   var fileExtension;
 
-  if (!file || (typeof file.isBuffer !== 'function')) { // dumb way to do instanceof so this module works when required
+  if (!isInstanceOfVinylFile(file)) {
     throw new Error('Expected vinyl file but got ' + file);
   }
 
@@ -28,6 +28,12 @@ module.exports = function (file) {
   }
   return null;
 };
+
+// dumb way to do instanceof so this module works when required from other modules
+// since `file` will be an instance of an object from a somewhere else
+function isInstanceOfVinylFile(file) {
+  return file && file.isBuffer && file.pipe;
+}
 
 function requireFromString(src, filename) {
   var Module = module.constructor;
