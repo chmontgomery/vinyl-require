@@ -1,13 +1,33 @@
 {
   "name": "vinyl-require",
   "version": "0.0.3",
-  "description": "",
+  "description": "Like calling node's require but instead parses the contents of a vinyl file",
   "main": "index.js",
   "scripts": {
     "test": "gulp ci"
   },
-  "author": "",
+  "author": {
+    "name": "Chris Montgomery",
+    "url": "http://www.chrismontgomery.info/"
+  },
+  "contributors": [
+    {
+      "name": "Chris Montgomery",
+      "url": "http://www.chrismontgomery.info/"
+    }
+  ],
   "license": "MIT",
+  "keywords": [
+    "vinyl",
+    "require"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chmontgomery/vinyl-require"
+  },
+  "bugs": {
+    "url": "https://github.com/chmontgomery/vinyl-require/issues"
+  },
   "devDependencies": {
     "gulp": "^3.8.6",
     "gulp-help": "^0.1.11",
